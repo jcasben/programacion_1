@@ -4,29 +4,21 @@ public class characters_searcher {
     
     private void inicio(){
     
-        Character letter;
+        Character letter = 's';
         LT in =  new LT();
         Boolean validation = false;
-        
-        System.out.println("Introduce una letra");
-        letter = in.llegirCaracter();
-        
-        while(letter == null){
-            System.out.println("ERROR: lo que has introducido no es una letra");
-            letter = in.llegirCaracter();
-        }
         
         while ((!validation) && (letter != '.')){
                         
             while(letter ==  null){
-                System.out.println("ERROR: lo que has introducido no es una letra");
+                System.out.println("ERROR: lo que has introducido no es una carácter");
                 letter = in.llegirCaracter();
             }
             
             System.out.println("Introduce una letra");
             letter = in.llegirCaracter();
             while(letter ==  null){
-                System.out.println("ERROR: lo que has introducido no es una letra");
+                System.out.println("ERROR: lo que has introducido no es un carácter");
                 letter = in.llegirCaracter();
             }
             
@@ -38,10 +30,8 @@ public class characters_searcher {
             System.out.println("No se han encontrado la letra a");
         }else{
             System.out.println("Se ha encontrado una vocal minúscula, la vocal '" + letter + "'");
-        }
-        
+        }        
     }
-
     public static void main(String[] args) {
         
         (new characters_searcher()).inicio();

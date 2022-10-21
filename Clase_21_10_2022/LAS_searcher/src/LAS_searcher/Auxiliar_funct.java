@@ -2,14 +2,15 @@ package LAS_searcher;
 
 public class Auxiliar_funct {
 
-    LT in = new LT();
+    LT in;
 
     public Auxiliar_funct(){
-        
+
     }
     
     public String find_LAS(){
 
+        in = new LT();
         Character letter = ' ', previous_letter = ' ', previous_letter2 = ' ';
         int counter = 0;
 
